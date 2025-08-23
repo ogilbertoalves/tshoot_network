@@ -30,7 +30,7 @@ nslookup www.google.com.br <IP_DNS2>
 
 nslookup -type=AAAA www.google.com.br (Forçar consulta em IPv6)
 ```
-Referência: [Nslookup](https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/nslookup)
+Referência: [Microsoft Docs - nslookup](https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/nslookup)
 
 ### Portais
 #### IPv4 e IPv6 Check
