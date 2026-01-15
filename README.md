@@ -109,3 +109,23 @@ curl https://iw.claro.com.br --verbose
 - Windows - Insider
 
 ### Android
+
+
+
+
+
+
+
+# Advanced Tools
+BGP IPv4/IPv6 Looking Glass Servers - BGP Route Servers (BGP, Border Gateway Protocol / Advanced Internet Routing)
+BGP - The Border Gateway Protocol / Advanced Internet Routing
+https://stat.ripe.net/app/launchpad
+https://www.bgp4.as/looking-glasses
+https://lg.maxiweb.com.br/cgi-local/lg.cgi
+https://lg.he.net/
+https://bgp.he.net/AS28573
+https://lg.bsa.g8.net.br/
+http://looking-glass.eletronet.com/
+https://news.lacnic.net/pt-br/roteamento/ferramentas-fundamentais-para-uma-boa-gestao-de-redes
+https://semanacap.bcp.nic.br/files/apresentacao/arquivo/1208/Ferramentas%20monitoramento%20(5).pdf
+https://wiki.brasilpeeringforum.org/w/Solucoes_para_o_gerenciamento_efetivo_do_bgp_em_um_sistema_autonomo
