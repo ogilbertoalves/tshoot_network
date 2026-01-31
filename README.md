@@ -1,6 +1,7 @@
-# Troubleshooting Básico & Intermediário (v3 -- Completo com Todas as Referências)
+# Troubleshooting Básico & Intermediário
 
 ------------------------------------------------------------------------
+v3
 
 # 1️⃣ Básico
 
