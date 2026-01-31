@@ -39,7 +39,9 @@ Referência: [Microsoft Docs - nslookup](https://learn.microsoft.com/pt-br/windo
 - [https://test-ipv6.csclub.uwaterloo.ca/index.html.pt_BR](https://test-ipv6.csclub.uwaterloo.ca/index.html.pt_BR)
 
 #### LookingGlass
-[https://lg.he.net/](https://lg.he.net/)
+- [https://lg.he.net/](https://lg.he.net/)
+- [https://lg.nocclaro.com.br/](https://lg.nocclaro.com.br/)
+- [https://lg-hg.nocclaro.com.br/](https://lg-hg.nocclaro.com.br/)
 
 #### PortScanner
 - [PortForward - Network Utilities](https://portforward.com/software/download-instructions/network-utilities/)
