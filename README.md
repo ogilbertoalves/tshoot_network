@@ -73,6 +73,8 @@ Referência: [Microsoft Docs - nslookup](https://learn.microsoft.com/pt-br/windo
 ### Instalar WSL
 [Guia de Instalação](https://learn.microsoft.com/pt-br/windows/wsl/install)
 
+
+## NETSH
 ### Checar Interfaces
 ```sh
 netsh interface ipv4 show subinterfaces
@@ -85,6 +87,7 @@ netsh interface ipv4 set subinterface "vEthernet (WSL)" mtu=1490 store=persisten
 ```
 [Referência](https://www.bemmelhor.com.br/info/index.php?title=Configurando_MTU_no_Windows)
 
+## CURL
 ### Testar Sites
 ```sh
 curl https://bb.com.br --verbose
@@ -109,12 +112,8 @@ curl https://iw.claro.com.br --verbose
 - Windows - Insider
 
 ### Android
-
-
-
-
-
-
+https://fidanov.net/landroid/
+https://play.google.com/store/apps/details?id=net.fidanov.landroid
 
 # Advanced Tools
 BGP IPv4/IPv6 Looking Glass Servers - BGP Route Servers (BGP, Border Gateway Protocol / Advanced Internet Routing)
