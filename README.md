@@ -115,24 +115,25 @@ curl https://iw.claro.com.br --verbose
 - Windows - Insider
 
 ### Android
-https://fidanov.net/landroid/
-https://play.google.com/store/apps/details?id=net.fidanov.landroid
+- [Landroid](https://fidanov.net/landroid/)
+- [PlayStore Landroid](https://play.google.com/store/apps/details?id=net.fidanov.landroid)
 
 # Advanced Tools
 BGP IPv4/IPv6 Looking Glass Servers - BGP Route Servers (BGP, Border Gateway Protocol / Advanced Internet Routing)
 BGP - The Border Gateway Protocol / Advanced Internet Routing
 
-https://stat.ripe.net/app/launchpad
-https://bgp.he.net/AS28573
+- [https://stat.ripe.net/app/launchpad](https://stat.ripe.net/app/launchpad)
+- [https://bgp.he.net/AS28573](https://bgp.he.net/AS28573)
 
 ## Looking Glass
-https://www.bgp4.as/looking-glasses
-https://lg.maxiweb.com.br/cgi-local/lg.cgi
-https://lg.he.net/
-https://lg.bsa.g8.net.br/
-https://lg.nocclaro.com.br/
-http://looking-glass.eletronet.com/
+- [https://www.bgp4.as/looking-glasses](https://www.bgp4.as/looking-glasses)
+- [https://lg.maxiweb.com.br/cgi-local/lg.cgi](https://lg.maxiweb.com.br/cgi-local/lg.cgi)
+- [https://lg.he.net/](https://lg.he.net/)
+- [https://lg.bsa.g8.net.br/](https://lg.bsa.g8.net.br/)
+- [https://lg.nocclaro.com.br/](https://lg.nocclaro.com.br/)
+- [http://looking-glass.eletronet.com/](http://looking-glass.eletronet.com/)
 
-https://news.lacnic.net/pt-br/roteamento/ferramentas-fundamentais-para-uma-boa-gestao-de-redes
-https://semanacap.bcp.nic.br/files/apresentacao/arquivo/1208/Ferramentas%20monitoramento%20(5).pdf
-https://wiki.brasilpeeringforum.org/w/Solucoes_para_o_gerenciamento_efetivo_do_bgp_em_um_sistema_autonomo
+## Artigos
+- [https://news.lacnic.net/pt-br/roteamento/ferramentas-fundamentais-para-uma-boa-gestao-de-redes](https://news.lacnic.net/pt-br/roteamento/ferramentas-fundamentais-para-uma-boa-gestao-de-redes)
+- [https://semanacap.bcp.nic.br/files/apresentacao/arquivo/1208/Ferramentas%20monitoramento%20(5).pdf](https://semanacap.bcp.nic.br/files/apresentacao/arquivo/1208/Ferramentas%20monitoramento%20(5).pdf)
+- [https://wiki.brasilpeeringforum.org/w/Solucoes_para_o_gerenciamento_efetivo_do_bgp_em_um_sistema_autonomo](https://wiki.brasilpeeringforum.org/w/Solucoes_para_o_gerenciamento_efetivo_do_bgp_em_um_sistema_autonomo)
