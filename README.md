@@ -34,6 +34,7 @@ Referência: [Microsoft Docs - nslookup](https://learn.microsoft.com/pt-br/windo
 
 ### Portais
 #### IPv4 e IPv6 Check
+- [https://ipv6.br/](https://ipv6.br/)
 - [https://test-ipv6.com](https://test-ipv6.com)
 - [https://test-ipv6.csclub.uwaterloo.ca/index.html.pt_BR](https://test-ipv6.csclub.uwaterloo.ca/index.html.pt_BR)
 
