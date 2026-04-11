@@ -1,62 +1,121 @@
-# TSHOOT IPTV GPON & IPTV VAS - CLARO BOX
+# TSHOOT — IPTV GPON & IPTV VAS (CLARO BOX)
 
-## TSHOOT TIME AT
-1. IPTV VAS OU IPTV GPON?
-2. CONECTADO REDE GPON CLARO?
-3. CONECTADO NOUTRA REDE, FUNCIONA?
-4. REALIZADO FACTORY RESET?
-5. INFORMAÇÕES DE IP/MASK/GW/DNS? (Enviar IMG de evidência)
-6. STATUS DIAGNÓSTICO DO SERVIDOR? (Enviar IMG de evidência)
-6.1 Vendor: ?
-6.2 Modelo: ?
-6.3 Decoder NUID: ?
-6.4 Decoder CA: ?
-6.5 Versão Firmware: ?
-6.6 Versão Atual: ?
-6.7 Control Plane: ?
-6.8 Data Plane: ?
-6.9 ID de Rede: ?
-6.10 Conexão com Traxis: ?
-6.11 SDP: ?
-6.12 VOD: ?
-7. SE TUDO OK NAS FASES ACIMA, FALHA QUAIS CANAIS (UNICAST OU MULTICAST OU AMBOS)?
-8. SE IPTV GPON E CANAIS MULTICAST COM FALHA, É POSSÍVEL REALIZAR TESTES COM O VLC NA URL RTP DO CANAL? (Obs.: Na mesma faixa de rede do Set-Top-Box)
-9. ESCALONAR TIME DTC N1/N2
- 
-## TSHOOT TIME HE/DTC N1/N2
-1. ONU OK NO LDAP/SAC/ACS/EMS(NCE|U31)/OLT?
-<CÓDIGO+CONTRATO> <SERIAL-NUMBER> <MAC> <OLT> <NAP> <LDAP OK?> <SAC OK?> <ACS OK?> <EMS(NCE|U31) OK?> <OLT OK?>
-Ex.: 994001027358 485754438C5BEE9F D0C65B301BF1 JIPNBAOLT01 NBA0080304 LDAP OK SAC OK ACS OK NCE OK OLT OK
-2. QUAIS SERVIÇOS ESTÃO HABILITADOS NA ONU?
-3. ONU COM IPS PARA AS WANS DE ACORDO COM OS SERVICE-PORT/VPORT?
-4. SE NOK, DHCP COM DESCOLAMENTO DE FALTA DE IPS?
-5. CANAIS UNICAST E MULTICAST
-5.1 SINAL DE ORIGEM NO DCM/IRD (LOCAL E VOC) OK?
-5.2 TRÁFEGO DO CANAL NA OLT OK? (Verifcar direto na OLT, Nagios e GRB)
-6. CANAIS UNICAST
-6.1 TODOS OS CANAIS OU CANAL NACIONAL ESPECÍFICO? (Caso sim, necessário acionar VOC/CAS)
-6.1.1 VERIFICAR SINAL ORIGEM DCM FEC (APENAS N3)
-6.1.2 VERIFICAR SINAL DCM/vDCM/X2 - ENCODERS (APENAS N3)
-6.1.3 VERIFICAR O PMx0- PACKAGER (APENAS N3)
-6.1.4 VERIFICAR O MIDIA-GRID (APENAS N3)
-6.1.5 VERIFICAR COM O CAS O DRM E MULTI-DRM
-6.1.6 VERIFICAR A CDN - SERVICE ROUTER/CONTENT ACQUIRE/STREAMER (APENAS N3)
-6.2 CANAL LOCAL ESPECÍFICO?
-6.2.1 VERIFICAR SINAL ORIGEM DCM/IRD OPERAÇÃO (HE N1/N2)
-6.2.2 VERIFICAR SINAL ORIGEM DCM FEC (APENAS N3)
-6.2.3 VERIFICAR O LINK ALL IP CONTRIBUTION
-6.2.4 VERIFICAR SINAL DCM/vDCM/X2 - ENCODERS (APENAS N3)
-6.2.5 VERIFICAR O PMx0- PACKAGER (APENAS N3)
-6.2.6 VERIFICAR O MIDIA-GRID (APENAS N3)
- 
-7. CANAIS MULTICAST
-7.1 SINAL ORIGEM DCM/IRD (LOCAL E VOC) OK?
-7.2 TRÁFEGO DO CANAL NA OLT OK? (Verifcar direto na OLT, Nagios e GRB)
-7.3 TRÁFEGO NA IPRAM OK? (Verificar GRB - Gráfico da subinterface de Multicast do lado IPRAMxOLT e do lado IPRAMxRTD_RESIDENCIAL)
-7.4 TESTE COM VLC NA URL RTP DO CANAL OK? (Necessário apoio do time de campo e/ou bases)
-7.5 NETWORKLOCATION ESTÁ COM APONTAMENTO PARA A URL RTP CORRETA?
- 
-## Referências:
-http://metadata.dth.virtua.com.br/metadata/delivery/NET/btv/services?filter={%22technical.regions%22:%221994%22}&pretty=true
-https://corpclarobr.sharepoint.com/:p:/r/sites/OT-CyberArk/_layouts/15/Doc.aspx?action=edit&sourcedoc=%7B1010e5dd-25c0-410f-acfe-f7e289582802%7D&wdOrigin=TEAMS-ELECTRON.teamsSdk.openFilePreview&wdExp=TEAMS-CONTROL&web=1
-https://corpclarobr.sharepoint.com/sites/OT-CyberArk/Documentos%20Compartilhados/TV%20Digital/DDAY_FTTH-2019_DAY_2.pdf?CT=1687638354680&OR=ItemsView
+------------------------------------------------------------------------
+
+## 📋 Visão Geral
+
+Este roteiro cobre o diagnóstico de falhas em serviços de IPTV na plataforma Claro Box, tanto para clientes com tecnologia **IPTV VAS** quanto **IPTV GPON**.
+
+------------------------------------------------------------------------
+
+## 1️⃣ Triagem Inicial — TIME AT
+
+### 1.1 Identificação do Serviço e Conectividade
+
+| # | Verificação | Observação |
+|---|---|---|
+| 1 | IPTV VAS ou IPTV GPON? | Identificar a plataforma antes de prosseguir |
+| 2 | Está conectado à rede GPON Claro? | Confirmar com o cliente |
+| 3 | Conectado em outra rede, funciona? | Isola se a falha é da rede Claro |
+| 4 | Foi realizado Factory Reset? | Descartar falha de configuração local |
+
+### 1.2 Coleta de Informações do Terminal
+
+Solicitar evidências (print/foto) das seguintes informações:
+
+- **Endereçamento IP:** IP / Máscara / Gateway / DNS
+- **Status do Diagnóstico do Servidor:**
+
+| Campo | Valor |
+|---|---|
+| Vendor | |
+| Modelo | |
+| Decoder NUID | |
+| Decoder CA | |
+| Versão Firmware | |
+| Versão Atual | |
+| Control Plane | |
+| Data Plane | |
+| ID de Rede | |
+| Conexão com Traxis | |
+| SDP | |
+| VOD | |
+
+### 1.3 Identificação da Falha por Tipo de Canal
+
+- Se tudo OK nas fases anteriores:
+  - Quais canais estão falhando? **UNICAST**, **MULTICAST** ou **ambos**?
+- Se **IPTV GPON** com falha em canais **Multicast**:
+  - É possível testar com VLC na URL RTP do canal?
+  - ⚠️ Obs.: O teste deve ser feito na mesma faixa de rede do Set-Top-Box.
+
+> **Se não resolvido:** Escalonar para o Time HE/DTC N1/N2.
+
+------------------------------------------------------------------------
+
+## 2️⃣ Diagnóstico Avançado — TIME HE/DTC N1/N2
+
+### 2.1 Validação da ONU na Plataforma
+
+Verificar o status da ONU nos sistemas: **LDAP / SAC / ACS / EMS (NCE | U31) / OLT**
+
+**Formato de evidência:**
+```
+<CÓDIGO+CONTRATO> <SERIAL-NUMBER> <MAC> <OLT> <NAP> <LDAP> <SAC> <ACS> <EMS> <OLT>
+
+Exemplo:
+994001027358  485754438C5BEE9F  D0C65B301BF1  JIPNBAOLT01  NBA0080304  LDAP OK  SAC OK  ACS OK  NCE OK  OLT OK
+```
+
+Verificar também:
+- Quais serviços estão habilitados na ONU?
+- A ONU possui IPs para as WANs conforme os Service-Port / VPort?
+- Se NOK: há descolamento de IPs no DHCP?
+
+------------------------------------------------------------------------
+
+### 2.2 Canais UNICAST
+
+#### 2.2.1 Todos os canais nacionais com falha?
+> Se sim, acionar VOC/CAS e verificar:
+
+| Etapa | Ação | Nível |
+|---|---|---|
+| 1 | Verificar sinal de origem no DCM FEC | N3 |
+| 2 | Verificar sinal DCM/vDCM/X2 — Encoders | N3 |
+| 3 | Verificar PMx0 — Packager | N3 |
+| 4 | Verificar Mídia-Grid | N3 |
+| 5 | Verificar com CAS o DRM e Multi-DRM | N3 |
+| 6 | Verificar CDN — Service Router / Content Acquire / Streamer | N3 |
+
+#### 2.2.2 Canal local específico com falha?
+
+| Etapa | Ação | Nível |
+|---|---|---|
+| 1 | Verificar sinal de origem DCM/IRD Operação | HE N1/N2 |
+| 2 | Verificar sinal de origem DCM FEC | N3 |
+| 3 | Verificar link All IP Contribution | HE N1/N2 |
+| 4 | Verificar sinal DCM/vDCM/X2 — Encoders | N3 |
+| 5 | Verificar PMx0 — Packager | N3 |
+| 6 | Verificar Mídia-Grid | N3 |
+
+------------------------------------------------------------------------
+
+### 2.3 Canais MULTICAST
+
+| Etapa | Verificação |
+|---|---|
+| 1 | Sinal de origem DCM/IRD (Local e VOC) OK? |
+| 2 | Tráfego do canal na OLT OK? (direto na OLT, Nagios e GRB) |
+| 3 | Tráfego na IPRAM OK? (GRB — gráfico da subinterface de Multicast: lado IPRAM×OLT e lado IPRAM×RTD_RESIDENCIAL) |
+| 4 | Teste com VLC na URL RTP do canal OK? (necessário apoio do time de campo e/ou bases) |
+| 5 | NetworkLocation com apontamento para a URL RTP correta? |
+
+------------------------------------------------------------------------
+
+## 📎 Referências
+
+- Metadata de canais por região:
+  `http://metadata.dth.virtua.com.br/metadata/delivery/NET/btv/services?filter={"technical.regions":"1994"}&pretty=true`
+- Documentação interna DDAY FTTH (SharePoint Claro):
+  `https://corpclarobr.sharepoint.com/sites/OT-CyberArk/...`
