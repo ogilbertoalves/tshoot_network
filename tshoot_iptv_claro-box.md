@@ -7,21 +7,21 @@
 4. REALIZADO FACTORY RESET?
 5. INFORMAÇÕES DE IP/MASK/GW/DNS? (Enviar IMG de evidência)
 6. STATUS DIAGNÓSTICO DO SERVIDOR? (Enviar IMG de evidência)
-Vendor: ?
-Modelo: ?
-Decoder NUID: ?
-Decoder CA: ?
-Versão Firmware: ?
-Versão Atual: ?
-Control Plane: ?
-Data Plane: ?
-ID de Rede: ?
-Conexão com Traxis: ?
-SDP: ?
-VOD: ?
-8. SE TUDO OK NAS FASES ACIMA, FALHA QUAIS CANAIS (UNICAST OU MULTICAST OU AMBOS)?
-9. SE IPTV GPON E CANAIS MULTICAST COM FALHA, É POSSÍVEL REALIZAR TESTES COM O VLC NA URL RTP DO CANAL? (Obs.: Na mesma faixa de rede do Set-Top-Box)
-10. ESCALONAR TIME DTC N1/N2
+6.1 Vendor: ?
+6.2 Modelo: ?
+6.3 Decoder NUID: ?
+6.4 Decoder CA: ?
+6.5 Versão Firmware: ?
+6.6 Versão Atual: ?
+6.7 Control Plane: ?
+6.8 Data Plane: ?
+6.9 ID de Rede: ?
+6.10 Conexão com Traxis: ?
+6.11 SDP: ?
+6.12 VOD: ?
+7. SE TUDO OK NAS FASES ACIMA, FALHA QUAIS CANAIS (UNICAST OU MULTICAST OU AMBOS)?
+8. SE IPTV GPON E CANAIS MULTICAST COM FALHA, É POSSÍVEL REALIZAR TESTES COM O VLC NA URL RTP DO CANAL? (Obs.: Na mesma faixa de rede do Set-Top-Box)
+9. ESCALONAR TIME DTC N1/N2
  
 ## TSHOOT TIME HE/DTC N1/N2
 1. ONU OK NO LDAP/SAC/ACS/EMS(NCE|U31)/OLT?
